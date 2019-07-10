@@ -9,23 +9,25 @@
   <body>
     <section class="title">
       <h2>Country Trivia</h2>
-      <h2 id="test">Empty</h2>
+      <h2 id="test"></h2>
       <h4>Geographical facts about most countries worldwide!</h4>
     </section>
     <section class="search-section">
       <div>
-        <input type="submit" value="Search" id="search-button" />
 
         <input
           type="text"
           id="myInput"
           onkeyup="myFunction()"
-          placeholder="Search for names.."
+          placeholder="Search for countries.."
         />
 
         <ul id="myUL"></ul>
       </div>
     </section>
+
+
+
     <section class="cards-box">
       <div class="card">
         <div class="card-front">
@@ -101,6 +103,10 @@
           <p>Back details</p>
         </div>
       </div>
+    </section>
+
+    <section class="flag-section">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Hawaii_%281896%29.svg/2000px-Flag_of_Hawaii_%281896%29.svg.png" alt="flag" id="flag">
     </section>
     <script src="JS.js" type="text/javascript"></script>
   </body>
