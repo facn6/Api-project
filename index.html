@@ -13,11 +13,19 @@
       <h4>Geographical facts about most countries worldwide!</h4>
     </section>
     <section class="search-section">
-        <div>
-            <input placeholder="Insert country name.." type="text" name="Country Name" id="search-bar">
-            <input type="submit" value="Search" id="search-button">
-        </div>
+      <div>
+        <input type="submit" value="Search" id="search-button" />
+
+        <input
+          type="text"
+          id="myInput"
+          onkeyup="myFunction()"
+          placeholder="Search for names.."
+        />
+
+        <ul id="myUL"></ul>
+      </div>
     </section>
-  <script src="JS.js" type="text/javascript"></script>
-</body>
+    <script src="JS.js" type="text/javascript"></script>
+  </body>
 </html>
