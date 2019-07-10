@@ -78,6 +78,9 @@ function getCountry(value) {
 
       var reg = document.getElementById("reg");
       reg.innerHTML = parsed[0].region;
+
+      var flag = document.getElementById("flag");
+      flag.src = parsed[0].flag;
     })
     .catch(function(error) {
       console.log(error);
