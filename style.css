@@ -5,41 +5,6 @@
   background-color: rgb(58, 0, 0);
   padding: 10px 10px;
 }
-.search-section {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.788),
-    rgb(0, 0, 0)
-  );
-  padding: 10px 10px;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  border-bottom: 5px solid rgb(58, 0, 0);
-}
-
-#myInput {
-  font-size: 20px;
-  border-style: 10%;
-  width: 40%;
-  padding: 5px 5px;
-  border-radius: 5%;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.514);
-}
-
-#search-button {
-  font-size: 20px;
-  border: 10%;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  padding: 5px 5px;
-  border-style: groove;
-  border-radius: 10%;
-}
-
-#search-button:hover {
-  background-color: rgba(97, 97, 97, 0.938);
-  color: rgb(255, 255, 255);
-}
 
 #myInput {
   background-image: url("/css/searchicon.png"); /* Add a search icon to input */
@@ -72,4 +37,79 @@
 
 #myUL li:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.search-section {
+  background-image: linear-gradient(to right, rgb(73, 7, 7), rgb(0, 0, 0));
+  padding: 10px 10px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  border-bottom: 5px solid rgba(0, 11, 73, 0.342);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* _____________________________________CARD-BOX_____________________________________________*/
+
+.cards-box {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 15, 58),
+    rgba(58, 7, 7, 0.74)
+  );
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.card {
+  align-content: center;
+  border-radius: 7px;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  box-sizing: content-box;
+  text-align: center;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.685),
+    rgba(51, 50, 92, 0.178)
+  );
+  color: rgba(240, 248, 255, 0.651);
+  border-radius: 3px;
+  border-bottom: 2px white solid;
+  border-right: 3px white solid;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(92, 23, 23, 0.685),
+    rgba(51, 50, 92, 0.151)
+  );
+  color: rgba(240, 248, 255, 0.651);
+  border-radius: 3px;
+  border-bottom: 2px white solid;
+  border-left: 3px white solid;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
