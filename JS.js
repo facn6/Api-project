@@ -12,10 +12,10 @@ function populate() {
         li.innerHTML = parsed[i].name;
         li.addEventListener("click", function(e) {
           getCountry(e.target.textContent);
-          document.getElementById("myInput").value = "";
-          document.getElementById("myUL").style.display = "none";
+          document.getElementById("input").value = "";
+          document.getElementById("serchList").style.display = "none";
         });
-        document.getElementById("myUL").appendChild(li);
+        document.getElementById("serchList").appendChild(li);
       }
     })
     .catch(function(error) {
@@ -26,10 +26,10 @@ populate();
 
 //This function shows and hides countries as the user types.
 
-function myFunction() {
+function showList() {
   var input, filter, ul, li, i, txtValue;
-  names = document.getElementById("myInput").value.toUpperCase();
-  ul = document.getElementById("myUL");
+  names = document.getElementById("input").value.toUpperCase();
+  ul = document.getElementById("serchList");
   ul.style.display = names.length == 0 ? "none" : "block";
 
   li = ul.getElementsByTagName("li");
@@ -46,7 +46,6 @@ function myFunction() {
 //This function populates the DOM (cards) with the info received from the API.
 
 function getCountry(value) {
-  console.log(value);
   var country = value;
   var objectRecieved = "https://restcountries.eu/rest/v2/name/" + country;
   fetch(objectRecieved)
@@ -54,9 +53,9 @@ function getCountry(value) {
       return response.json();
     })
     .then(function(parsed) {
-      var test = document.getElementById("test");
+      var countryName = document.getElementById("countryName");
       var fromHTML = parsed[0].name;
-      test.innerHTML = fromHTML;
+      countryName.innerHTML = fromHTML;
 
       var lang = document.getElementById("language");
       var langApi = parsed[0].languages.map(function(element) {
