@@ -41,7 +41,7 @@
 }
 
 .search-section {
-  background-image: linear-gradient(to bottom, rgb(26, 32, 83), rgb(0, 0, 0));
+  background-image: linear-gradient(to bottom, rgb(34, 38, 94), rgb(0, 0, 0));
   padding: 10px 10px;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -71,8 +71,9 @@
   margin: 20px;
   box-sizing: content-box;
   text-align: center;
-  transition: all 1s ease;
+  transition: all 0.7s ease-in-out;
   transform-style: preserve-3d;
+  
 }
 
 .card:hover {
@@ -97,7 +98,6 @@
   border-radius: 3px;
   border-bottom: 2px white solid;
   border-top: 1px white solid;
-  border-right: 3px white solid;
   backface-visibility: hidden;
 }
 
@@ -110,7 +110,6 @@
   color: rgba(240, 248, 255, 0.651);
   border-radius: 3px;
   border-bottom: 2px white solid;
-  border-left: 3px white solid;
   border-top: 1px white solid;
   transform: rotateY(180deg);
   backface-visibility: hidden;
