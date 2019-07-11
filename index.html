@@ -9,19 +9,19 @@
   <body>
     <section class="title">
       <h2>Country Trivia</h2>
-      <h2 id="test"></h2>
+      <h2 id="countryName"></h2>
       <h4>Geographical facts about most countries worldwide!</h4>
     </section>
     <section class="search-section">
       <div>
         <input
           type="text"
-          id="myInput"
-          onkeyup="myFunction()"
+          id="input"
+          onkeyup="showList()"
           placeholder="Search for countries.."
         />
 
-        <ul id="myUL"></ul>
+        <ul id="serchList"></ul>
       </div>
     </section>
 
